@@ -18,19 +18,3 @@ This system addresses the lack of built-in security in the **Modbus TCP** protoc
 ##Architecture
 The system operates as a "Guardian" sidecar to the critical infrastructure.
 
-```mermaid
-graph TD
-    A[Attacker] -->|Injects False Data (1200°C)| B[Virtual Plant (PLC)]
-    B <-->|Reads & Writes| C[AI Defense Engine]
-    C -->|1. Detects Anomaly| D{Is Attack?}
-    D -- YES --> E[Auto-Remediation]
-    E -->|Force Write Safe Value (60°C)| B
-    C -->|2. Updates Status| F[Dashboard]
-
-False Data Injection Defense: Mitigates integrity attacks targeting critical sensor readings.
-
-Automated Incident Response (SOAR): Reduces "Time to Remediate" from minutes to milliseconds without human intervention.
-
-Behavioral Analysis: Detects attacks based on mathematical anomalies rather than static signatures.
-
-Operational Resilience: Ensures the physical system remains within safety limits even during an active breach.
