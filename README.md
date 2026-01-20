@@ -15,6 +15,11 @@ This system addresses the lack of built-in security in the **Modbus TCP** protoc
 * **Active Defense (SOAR):** Automatically engages "Self-Healing" protocols to overwrite malicious data and reset turbines to safe operational limits.
 * **Real-Time SOC Dashboard:** A Flask-based interface mimicking a National Grid Monitor for visual threat tracking.
 
-##Architecture
-The system operates as a "Guardian" sidecar to the critical infrastructure.
+**1. False Data Injection Defense: Mitigates integrity attacks targeting critical sensor readings.
+
+**2. Automated Incident Response (SOAR): Reduces "Time to Remediate" from minutes to milliseconds without human intervention.
+
+**3. Behavioral Analysis: Detects attacks based on mathematical anomalies rather than static signatures.
+
+**4. Operational Resilience: Ensures the physical system remains within safety limits even during an active breach.
 
